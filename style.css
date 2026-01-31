@@ -1,0 +1,248 @@
+/* Reseta as configurações padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #d4af37; /* Dourado (clássico de tattoo) */
+    --bg-dark: #121212;
+    --bg-light: #1a1a1a;
+    --text-light: #f4f4f4;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Utilitários */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.bg-dark {
+    background-color: var(--bg-light);
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 5px 0;
+    z-index: 1000;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo img {
+    height: 110px;  /* Teste 80px, 90px ou 100px até achar o tamanho ideal */
+    width: auto;   /* Garante que a logo não fique esticada/achatada */
+    transition: all 0.3s ease; /* (Opcional) Deixa suave se mudar de tamanho depois */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.menu-mobile {
+    display: none; /* Escondido no Desktop */
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section com sua imagem de fundo */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/estudio.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.btn-main {
+    display: inline-block;
+    padding: 10px 30px;
+    background: var(--primary-color);
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+/* Portfolio - A parte mais importante */
+.portfolio-grid {
+    display: grid;
+    /* Isso faz a responsividade automática sem media queries complexas */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.portfolio-item {
+    overflow: hidden;
+    border-radius: 5px;
+    height: 300px; /* Altura fixa para alinhar tudo */
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Corta a imagem para preencher o quadrado sem distorcer */
+    transition: transform 0.3s;
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.1); /* Zoom suave ao passar o mouse */
+}
+
+/* Se o fundo do site é muito escuro (#121212), vamos fazer essa área um pouco mais clara */
+#piercing {
+    background-color: #1e1e1e; /* Um cinza um pouco mais claro que o fundo padrão */
+    border-top: 1px solid #333; /* Uma linha sutil para separar */
+}
+
+/* Footer */
+footer {
+    background: #000;
+    padding: 40px 0 20px;
+    text-align: center;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.socials a {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-left: 15px;
+}
+
+details {
+    background: #222;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+summary {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.btn-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    z-index: 1001; /* Fica acima de tudo */
+    transition: transform 0.3s;
+}
+.btn-whatsapp:hover {
+    transform: scale(1.1);
+}
+
+
+.btn-insta {
+    position: relative;
+    bottom: 20px;
+    right: -6px;
+    background-color: #d32556;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    z-index: 1001; /* Fica acima de tudo */
+    transition: transform 0.3s;
+}
+.btn-insta:hover {
+    transform: scale(1.1);
+}
+iframe { width: 100%; height: 300px; border: 0; }
+
+/* Responsividade para Celular */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Escondemos o menu padrão no mobile */
+        /* Aqui você usaria JS para mostrar um menu lateral se quiser */
+    }
+    
+    .menu-mobile {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .footer-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

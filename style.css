@@ -227,22 +227,65 @@ summary {
 iframe { width: 100%; height: 300px; border: 0; }
 
 /* Responsividade para Celular */
+
+/* --- CORREÇÃO GERAL DE IMAGENS --- */
+/* Isso resolve o problema da imagem do estúdio vazar da tela */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove espaços brancos estranhos abaixo da imagem */
+}
+
+/* --- AJUSTE DO MENU MOBILE --- */
 @media (max-width: 768px) {
+    /* Escondemos a lista por padrão */
     .nav-links {
-        display: none; /* Escondemos o menu padrão no mobile */
-        /* Aqui você usaria JS para mostrar um menu lateral se quiser */
-    }
-    
-    .menu-mobile {
-        display: block;
+        display: none; 
+        position: absolute;
+        top: 70px; /* Altura da barra de navegação */
+        right: 0;
+        width: 100%; /* Ocupa a largura toda (estilo gaveta) ou coloque 50% */
+        height: auto; /* Ou 90vh para ocupar a tela toda */
+        background-color: rgba(0, 0, 0, 0.95); /* Fundo bem escuro */
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        border-top: 1px solid #333;
     }
 
-    .hero h1 {
+    /* Essa é a classe que o JavaScript vai adicionar ao clicar */
+    .nav-links.active {
+        display: flex; /* Mostra o menu quando ativo */
+    }
+
+    .nav-links li {
+        margin: 15px 0; /* Espaçamento entre os links no celular */
+    }
+    
+    /* Ajuste para o ícone do menu aparecer */
+    .menu-mobile {
+        display: block;
+        color: #fff;
+        font-size: 1.8rem;
+        cursor: pointer;
+        padding-right: 20px; /* Um respiro da borda direita */
+    }
+
+     .hero h1 {
         font-size: 2.5rem;
     }
     
     .footer-flex {
         flex-direction: column;
         gap: 20px;
+    }
+    .hero {
+        /* Muda o ponto de foco da imagem de fundo */
+        /* Tente: 'center top' se o importante estiver em cima */
+        /* Tente: 'center center' se for no meio */
+        background-position: center center; 
+        
+        /* Opcional: Diminuir a altura no celular para ver o conteúdo antes */
+        height: 80vh; 
     }
 }

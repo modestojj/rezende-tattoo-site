@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 :root {
     --primary-color: #d4af37; /* Dourado (clássico de tattoo) */
@@ -150,6 +153,71 @@ nav {
     border-top: 1px solid #333; /* Uma linha sutil para separar */
 }
 
+/* form para email */
+
+/* --- Formulário de Orçamento --- */
+.form-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #1e1e1e; /* Fundo cinza levemente mais claro */
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.input-group {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Deixa os inputs empilhados no celular */
+@media (max-width: 768px) {
+    .input-group {
+        flex-direction: column;
+        gap: 0;
+    }
+    .input-group input {
+        margin-bottom: 20px;
+    }
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    background: #121212; /* Fundo escuro pro campo */
+    border: 1px solid #333;
+    color: #fff;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary-color); /* Dourado ao clicar */
+}
+
+.btn-form {
+    width: 100%;
+    padding: 15px;
+    background: var(--primary-color);
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: transform 0.2s, background 0.3s;
+    margin-top: 10px;
+}
+
+.btn-form:hover {
+    transform: scale(1.02);
+    background: #fff; /* Fica branco ao passar o mouse */
+}
 /* Footer */
 footer {
     background: #000;
@@ -170,16 +238,58 @@ footer {
     margin-left: 15px;
 }
 
-details {
-    background: #222;
-    margin-bottom: 10px;
-    padding: 15px;
-    border-radius: 5px;
-    cursor: pointer;
+/* --- FAQ (Acordeão) --- */
+
+.faq-grid {
+    max-width: 800px; /* Limita a largura para facilitar a leitura */
+    margin: 0 auto;   /* Centraliza */
 }
+
+details {
+    background-color: #222; /* Fundo cinza escuro */
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #333; /* Borda sutil */
+    transition: all 0.3s ease;
+}
+
+details[open] {
+    border-color: var(--primary-color); /* Fica dourado quando aberto */
+}
+
 summary {
+    padding: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    list-style: none; /* Remove a setinha padrão feia do navegador */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Criação do ícone de "+" com CSS puro */
+summary::after {
+    content: '+'; 
+    font-size: 1.5rem;
     color: var(--primary-color);
     font-weight: bold;
+    transition: transform 0.3s;
+}
+
+/* Transforma o "+" em "x" girando quando aberto */
+details[open] summary::after {
+    transform: rotate(45deg);
+}
+
+details p {
+    padding: 0 20px 20px 20px;
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    border-top: 1px solid #333; /* Linha separando pergunta da resposta */
+    margin-top: 10px; /* Um respiro */
 }
 
 .btn-whatsapp {
@@ -224,7 +334,15 @@ summary {
 .btn-insta:hover {
     transform: scale(1.1);
 }
-iframe { width: 100%; height: 300px; border: 0; }
+/* mapa */
+iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    margin-bottom: 30px;
+    border-radius: 10px;
+
+}
 
 /* Responsividade para Celular */
 
@@ -288,4 +406,41 @@ img {
         /* Opcional: Diminuir a altura no celular para ver o conteúdo antes */
         height: 80vh; 
     }
+}
+
+/* --- Slider Antes e Depois --- */
+
+/* Centraliza e limita o tamanho para não ficar gigante em monitores */
+.slider-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 2px solid var(--primary-color); /* Borda dourada fina */
+    border-radius: 10px;
+    overflow: hidden; /* Garante que a imagem não vaze as bordas arredondadas */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra elegante */
+}
+
+/* Configurações do componente */
+img-comparison-slider {
+    visibility: visible; /* Garante que aparece */
+    width: 100%;
+    outline: none;
+    transition: box-shadow 0.3s;
+    --divider-width: 2px;
+    --divider-color: var(--primary-color); /* Linha divisória Dourada */
+    --default-handle-opacity: 1;
+}
+
+/* Garante que as imagens dentro do slider preencham tudo */
+img-comparison-slider img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 500px; /* Altura máxima para não ocupar a tela toda */
+}
+
+/* Texto pequeno de instrução */
+.text-muted {
+    color: #888;
+    font-style: italic;
 }

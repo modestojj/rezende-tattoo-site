@@ -10,16 +10,28 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="favicon.png">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+<script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"/>
+
+<meta property="og:title" content="Rezende Tattoo Studio - Arte na Pele & Piercing">
+<meta property="og:description" content="Especialista em Realismo, Old School e Body Piercing. Agende sua sessão e confira nosso portfólio.">
+<meta property="og:image" content="https://modestojj.github.io/rezende-tattoo-site/img/estudio.jpg"> <meta property="og:url" content="https://seusuario.github.io/rezende-tattoo-site/">
+<meta property="og:type" content="website">
+
   </head>
   <body>
+
+
     <nav id="navbar">
       <div class="container nav-flex">
         <div class="logo">
-          <img src="img/logo_rezende.png" alt="Rezende Tattoo Logo" />
+            <a href="#home"></a>
+          <img src="img/logo_rezende.png" alt="Rezende Tattoo Logo"/>
         </div>
         <ul class="nav-links">
           <li><a href="#home">Início</a></li>
@@ -63,14 +75,45 @@
         <h2>Trabalhos Recentes</h2>
         <div class="portfolio-grid">
           <div class="portfolio-item">
+            <a href="img/tattoo-realista-1.png" class="galeria">
             <img src="img/tattoo-realista-1.png" alt="Tatuagem Realista" />
-          </div>
+            </a>
+            </div>
+
           <div class="portfolio-item">
+            <a href="img/tattoo-old.png" class="galeria">
             <img src="img/tattoo-old.png" alt="Tatuagem Old School" />
+            </a>
           </div>
+
           <div class="portfolio-item">
+            <a href="img/tattoo-black.png">
             <img src="img/tattoo-black.png" alt="Tatuagem Blackwork" />
-          </div>
+        </a>
+    </div>
+</div>
+</section>
+<section id="coverup" class="section-padding bg-dark">
+<div class="container">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h2>Reformas & Coberturas</h2>
+            <p>Arraste a barra para ver a transformação completa.</p>
+        </div>
+
+        <div class="slider-wrapper">
+            <img-comparison-slider>
+                <img slot="first" src="img/comp-1.png" alt="Tatuagem antiga" />
+                
+                <img slot="second" src="img/comp-2.png" alt="Cobertura realizada" />
+                
+                <svg slot="handle" class="custom-handle" xmlns="http://www.w3.org/2000/svg" width="100" viewBox="-8 -3 16 6">
+                    <path stroke="#d4af37" stroke-width="2" fill="#d4af37" d="M -5 -2 L -7 0 L -5 2 M 5 -2 L 7 0 L 5 2 M -3 -2 L -3 2 M 3 -2 L 3 2" />
+                </svg>
+            </img-comparison-slider>
+        </div>
+        
+        <div style="text-align: center; margin-top: 20px;">
+            <p class="text-muted"><small>* Arraste para comparar</small></p>
         </div>
       </div>
 
@@ -88,14 +131,22 @@
 
            <div class="portfolio-grid">
             <div class="portfolio-item">
+                <a href="img/piercing-1.png">
                 <img src="img/piercing-1.png" alt="Piercing no Septo">
+                </a>
             </div>
             <div class="portfolio-item">
+                <a href="img/piercing-2.png">
                 <img src="img/piercing-2.png" alt="Piercing na Orelha">
+                </a>
             </div>
             <div class="portfolio-item">
+                <a href="img/piercing-3.png">
                 <img src="img/piercing-3.png" alt="Joias de Titânio">
+                </a>
             </div>
+            
+
         </div>
 
         <div style="text-align: center; margin-top: 30px;">
@@ -103,21 +154,72 @@
         </div>
     </section>
 
+    <section id="orcamento" class="section-padding">
+    <div class="container">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h2>Solicite seu Orçamento</h2>
+            <p>Conte sua ideia e entraremos em contato com o valor e datas disponíveis.</p>
+        </div>
+
+        <div class="form-wrapper"  id="contato">
+            <form action="https://formsubmit.co/jeanfmodesto6734@gmail.com" method="POST">
+                
+                <input type="hidden" name="_next" value="https://modestojj.github.io/rezende-tattoo-site/">
+                <input type="hidden" name="_captcha" value="false">
+
+                <div class="input-group">
+                    <input type="text" name="nome" placeholder="Seu Nome" required>
+                    <input type="email" name="email" placeholder="Seu E-mail" required>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" name="telefone" placeholder="WhatsApp (com DDD)" required>
+                    <input type="text" name="local_corpo" placeholder="Local do corpo (ex: Braço)" required>
+                </div>
+
+                <textarea name="ideia" rows="5" placeholder="Descreva sua ideia para a tatuagem..." required></textarea>
+
+                <button type="submit" class="btn-form">Enviar Solicitação</button>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- faq ==================== -->
     <section class="container section-padding">
-    <h2>Dúvidas Frequentes</h2>
-    <div class="faq-item">
-        <details>
-            <summary>Como funciona o orçamento?</summary>
-            <p>Nossos orçamentos são feitos via WhatsApp. Envie sua ideia, tamanho em cm e local do corpo.</p>
-        </details>
-        <details>
-            <summary>Quais os cuidados após a tattoo?</summary>
-            <p>Manter limpo, hidratado e evitar sol/mar por 15 dias.</p>
-        </details>
+       <section id="faq" class="section-padding">
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 40px;">Dúvidas Frequentes</h2>
+        
+        <div class="faq-grid">
+            <details>
+                <summary>Como funciona o orçamento?</summary>
+                <p>Nossos orçamentos são realizados preferencialmente via WhatsApp. Para agilizar, envie: referência da imagem, local do corpo e tamanho aproximado em centímetros.</p>
+            </details>
+
+            <details>
+                <summary>Qual o valor mínimo da tatuagem?</summary>
+                <p>Trabalhamos com valor de saída de estúdio para cobrir custos de biossegurança e materiais descartáveis. Entre em contato para valores atualizados.</p>
+            </details>
+
+            <details>
+                <summary>Tatuagem dói muito?</summary>
+                <p>A dor é relativa e varia de pessoa para pessoa e do local do corpo. Porém, trabalhamos com técnicas de mão leve e ambiente climatizado para o maior conforto possível.</p>
+            </details>
+
+            <details>
+                <summary>Quais os cuidados pós-tatuagem?</summary>
+                <p> 1. Manter a área limpa e hidratada; </p>
+                <p>2. Não coçar ou arrancar casquinhas;</p>
+                <p>3. Evitar sol, piscina e mar por 15 dias;</p>
+                <p>4. Evitar alimentos gordurosos na primeira semana.</p> 
+            </details>
+        </div>
+    </div>
+</section>
     </div>
 </section>
 
-    <footer id="contato">
+    <footer>
       <div class="container footer-flex">
         <div class="info">
           <h3>Entre em Contato</h3>
@@ -133,7 +235,7 @@
       
     
 
-    <script src="script.js"></script>
+
 
      <a href="https://www.instagram.com/rezendetatuagem?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
      class="btn-insta" 
@@ -150,6 +252,9 @@
         <p>&copy; 2026 Rezende Tattoo. Todos os direitos reservados.</p>
       </div>
     </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.10.3/simple-lightbox.min.js"></script>
+        <script src="script.js"></script>
   </body>
   
 </html>

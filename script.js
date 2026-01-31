@@ -17,3 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+// Ativa o Lightbox na galeria
+var lightbox = new SimpleLightbox('.galeria', { 
+    /* opções */ 
+    captionsData: 'alt',
+    captionDelay: 250,
+});

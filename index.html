@@ -20,8 +20,10 @@
 
 <meta property="og:title" content="Rezende Tattoo Studio - Arte na Pele & Piercing">
 <meta property="og:description" content="Especialista em Realismo, Old School e Body Piercing. Agende sua sessão e confira nosso portfólio.">
-<meta property="og:image" content="https://modestojj.github.io/rezende-tattoo-site/img/estudio.jpg"> <meta property="og:url" content="https://seusuario.github.io/rezende-tattoo-site/">
+<meta property="og:image" content="https://modestojj.github.io/rezende-tattoo-site/img/estudio.jpg"> <meta property="og:url" content="https://modestojj.github.io/rezende-tattoo-site/">
 <meta property="og:type" content="website">
+
+
 
   </head>
   <body>
@@ -36,9 +38,10 @@
         <ul class="nav-links">
           <li><a href="#home">Início</a></li>
           <li><a href="#sobre">Estúdio</a></li>
-          <li><a href="#portfolio">Tattoo</a></li>
-          <li><a href="#piercing">Piercing</a></li>
-          <li><a href="#contato" class="btn-destaque">Agendar</a></li>
+          <li><a href="https://www.instagram.com/rezendetatuagem?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Tattoo</a></li>
+          <li><a href="https://www.instagram.com/piercer.angelica?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank">Piercing</a></li>
+          <li><a href="#orcamento" class="btn-destaque">Agendar</a></li>
         </ul>
         <div class="menu-mobile">
           <i class="fas fa-bars"></i>
@@ -48,8 +51,8 @@
 
     <header id="home" class="hero">
       <div class="hero-content">
-        <h1>Arte na Pele</h1>
-        <p>Transformando suas ideias em tatuagens exclusivas.</p>
+        <h1>Rezende tattoo</h1>
+        <h3>Transformando suas ideias em tatuagens exclusivas.</h3>
         <a href="#portfolio" class="btn-main">Ver Portfolio</a>
       </div>
     </header>
@@ -63,9 +66,39 @@
               Nosso estúdio une arte profissional, rigor nos cuidados é um ambiente acolhedor, pensado para que você se sinta confortável e confiante em cada etapa da sua tatuagem.
             </p>
           </div>
-          <div class="imagem-estudio">
-            <img src="img/estudio.png" alt="Foto do Estúdio" />
-          </div>
+         <div class="studio-carousel-wrapper">
+    <swiper-container style="--swiper-navigation-color: #d4af37; --swiper-pagination-color: #d4af37;" 
+                      class="mySwiper" 
+                      pagination="true" 
+                      pagination-clickable="true" 
+                      navigation="true" 
+                      space-between="30"
+                      loop="true" 
+                      autoplay-delay="4000"
+                      autoplay-disable-on-interaction="false">
+
+        <swiper-slide>
+            <img src="img/estudio-1IA.png" alt="Recepção do Estúdio Rezende" loading="lazy" />
+            <div class="slide-caption">Recepção e Área de Espera</div>
+        </swiper-slide>
+        
+        <swiper-slide>
+            <img src="img/estudio-2.jpg" alt="Maca de Tatuagem e Equipamentos" loading="lazy" />
+             <div class="slide-caption">Área de Procedimentos (Biossegurança)</div>
+        </swiper-slide>
+
+        <swiper-slide>
+            <img src="img/estudio-4.jpg" alt="Vitrine de Piercings e Joias" loading="lazy" />
+             <div class="slide-caption">Vitrine de Joias Premium</div>
+        </swiper-slide>
+        
+        <swiper-slide>
+            <img src="img/estudio-3.jpg" alt="Decoração e Ambiente do Estúdio" loading="lazy" />
+             <div class="slide-caption">Ambiente Climatizado e Confortável</div>
+        </swiper-slide>
+        
+    </swiper-container>
+</div>
         </div>
       </div>
     </section>
@@ -75,21 +108,15 @@
         <h2>Trabalhos Recentes</h2>
         <div class="portfolio-grid">
           <div class="portfolio-item">
-            <a href="img/tattoo-realista-1.png" class="galeria">
             <img src="img/tattoo-realista-1.png" alt="Tatuagem Realista" />
-            </a>
             </div>
 
           <div class="portfolio-item">
-            <a href="img/tattoo-old.png" class="galeria">
             <img src="img/tattoo-old.png" alt="Tatuagem Old School" />
-            </a>
           </div>
 
           <div class="portfolio-item">
-            <a href="img/tattoo-black.png">
             <img src="img/tattoo-black.png" alt="Tatuagem Blackwork" />
-        </a>
     </div>
 </div>
 </section>
@@ -124,26 +151,20 @@
 
     <section id="piercing" class="section-padding">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 400px ;">
-                <h2>Body Piercing</h2>
+            <div style="text-align: center; margin-bottom: 40px ;">
+                <h2>Body Piercing & Micropigmentação</h2>
                 <p>Aplicação sergura, biossegurança garantia e joia de aço e titânio grau implante</p>
             </div>
 
            <div class="portfolio-grid">
             <div class="portfolio-item">
-                <a href="img/piercing-1.png">
                 <img src="img/piercing-1.png" alt="Piercing no Septo">
-                </a>
             </div>
             <div class="portfolio-item">
-                <a href="img/piercing-2.png">
                 <img src="img/piercing-2.png" alt="Piercing na Orelha">
-                </a>
             </div>
             <div class="portfolio-item">
-                <a href="img/piercing-3.png">
-                <img src="img/piercing-3.png" alt="Joias de Titânio">
-                </a>
+                <img src="img/piercing-3.png" alt="Micropigmentação">
             </div>
             
 
@@ -154,36 +175,74 @@
         </div>
     </section>
 
-    <section id="orcamento" class="section-padding">
+    <!-- orçamento -->
+     <section id="orcamento" class="section-padding">
     <div class="container">
         <div style="text-align: center; margin-bottom: 40px;">
             <h2>Solicite seu Orçamento</h2>
-            <p>Conte sua ideia e entraremos em contato com o valor e datas disponíveis.</p>
+            <p>Preencha os dados abaixo e inicie a conversa direto no nosso WhatsApp.</p>
         </div>
 
-        <div class="form-wrapper"  id="contato">
-            <form action="https://formsubmit.co/jeanfmodesto6734@gmail.com" method="POST">
+        <div class="form-wrapper">
+            <form id="whatsappForm">
                 
-                <input type="hidden" name="_next" value="https://modestojj.github.io/rezende-tattoo-site/">
-                <input type="hidden" name="_captcha" value="false">
-
                 <div class="input-group">
-                    <input type="text" name="nome" placeholder="Seu Nome" required>
-                    <input type="email" name="email" placeholder="Seu E-mail" required>
+                    <input type="text" id="nome" placeholder="Seu Nome" required>
+                    <select id="cliente_antigo">
+                        <option value="Não">Primeira vez no estúdio</option>
+                        <option value="Sim">Já sou cliente</option>
+                    </select>
                 </div>
 
-                <div class="input-group">
-                    <input type="text" name="telefone" placeholder="WhatsApp (com DDD)" required>
-                    <input type="text" name="local_corpo" placeholder="Local do corpo (ex: Braço)" required>
+                <div style="margin-bottom: 20px;">
+                    <label style="color: #ccc; display: block; margin-bottom: 10px;">O que vamos fazer?</label>
+                    <div class="service-selector">
+                        <label class="radio-box">
+                            <input type="radio" name="servico" value="tatuagem" checked onclick="toggleCampos()">
+                            <span>Tatuagem</span>
+                        </label>
+                        <label class="radio-box">
+                            <input type="radio" name="servico" value="piercing" onclick="toggleCampos()">
+                            <span>Piercing</span>
+                        </label>
+                    </div>
                 </div>
 
-                <textarea name="ideia" rows="5" placeholder="Descreva sua ideia para a tatuagem..." required></textarea>
+                <div id="campos-tattoo">
+                    <div class="input-group">
+                        <input type="text" id="local_corpo" placeholder="Local do corpo (ex: Antebraço)">
+                        <input type="text" id="tamanho" placeholder="Tamanho aproximado (cm)">
+                    </div>
+                    <textarea id="ideia_tattoo" rows="4" placeholder="Descreva sua ideia para a tattoo... (Ex: Um leão realista preto e cinza)"></textarea>
+                    <p style="color: #888; font-size: 0.9rem; margin-top: 5px;">*Você poderá enviar fotos de referência direto no WhatsApp.</p>
+                </div>
 
-                <button type="submit" class="btn-form">Enviar Solicitação</button>
+                <div id="campos-piercing" style="display: none;">
+                    <select id="local_piercing">
+                        <option value="" disabled selected>Onde será o piercing?</option>
+                        <option value="Orelha (Lóbulo)">Orelha (Lóbulo)</option>
+                        <option value="Orelha (Cartilagem/Helix)">Orelha (Cartilagem/Helix)</option>
+                        <option value="Nariz (Nostril)">Nariz (Nostril/Aba)</option>
+                        <option value="Nariz (Septo)">Nariz (Septo)</option>
+                        <option value="Umbigo">Umbigo</option>
+                        <option value="Sobrancelha">Sobrancelha</option>
+                        <option value="Outro">Outro (Especifique no WhatsApp)</option>
+                    </select>
+                    <select id="tipo_joia" style="margin-top: 15px;">
+                        <option value="Básico (Aço Cirúrgico)">Joia Básica (Aço Cirúrgico)</option>
+                        <option value="Premium (Titânio)">Joia Premium (Titânio - Mais seguro)</option>
+                        <option value="Ouro">Joia em Ouro</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-form" style="margin-top: 20px;">
+                    <i class="fab fa-whatsapp"></i> Enviar para WhatsApp
+                </button>
             </form>
         </div>
     </div>
 </section>
+
 <!-- faq ==================== -->
     <section class="container section-padding">
        <section id="faq" class="section-padding">
@@ -227,9 +286,7 @@
           <p><i class="fas fa-map-marker-alt"></i> Rua Exemplo, 123 - Centro</p>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3483.823219969526!2d-51.51828902447942!3d-29.1698812253755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951c23e8c3b32c87%3A0xac07fb1614381543!2sRezende%20Tattoo%20%26%20Piercing!5e0!3m2!1spt-BR!2sbr!4v1769881409257!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <!-- <div class="socials">
-          <a href="https://www.instagram.com/rezendetatuagem?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"> <i class="fab fa-instagram"></i></a>
-        </div> -->
+   
       </div>
 
       
@@ -254,6 +311,7 @@
     </footer>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.10.3/simple-lightbox.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
         <script src="script.js"></script>
   </body>
   

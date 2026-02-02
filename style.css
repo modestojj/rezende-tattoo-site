@@ -95,7 +95,7 @@ nav {
 /* Hero Section com sua imagem de fundo */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/estudio.png');
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/estudio1.2.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -107,7 +107,7 @@ nav {
 .hero h1 {
     font-size: 3.5rem;
     color: var(--primary-color);
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .btn-main {
@@ -152,6 +152,7 @@ nav {
     background-color: #1e1e1e; /* Um cinza um pouco mais claro que o fundo padrão */
     border-top: 1px solid #333; /* Uma linha sutil para separar */
 }
+
 
 /* form para email */
 
@@ -353,6 +354,43 @@ img {
     height: auto;
     display: block; /* Remove espaços brancos estranhos abaixo da imagem */
 }
+/* --- AJUSTES FINAIS PARA CELULAR --- */
+@media (max-width: 768px) {
+
+    /* 1. CORREÇÃO DO ZOOM NOS PIERCINGS */
+    /* Remove o zoom "exagerado" no celular e deixa a imagem no tamanho natural */
+    #piercing .portfolio-item img {
+        transform: scale(1) !important; /* Volta para escala 1 (sem zoom) */
+        object-position: center;
+    }
+    
+    /* (Opcional) Se mesmo em 1x cortar muito, use isso para mostrar a imagem inteira: */
+    /* #piercing .portfolio-item img {
+        object-fit: contain;
+        background: #000; 
+    } 
+    */
+
+    /* 2. CORREÇÃO DO TEXTO EM CIMA DO ROSTO (HERO) */
+    .hero {
+        /* Em vez de centralizar (center), alinha o conteúdo para BAIXO (flex-end) */
+        align-items: flex-end; 
+        
+        /* Dá um espaço embaixo para o texto não colar no final da tela */
+        /* Aumente ou diminua esse 120px para controlar a altura exata */
+        padding-bottom: 100px; 
+    }
+
+    /* Garante que o texto fique legível */
+    .hero-content {
+        width: 100%;
+        /* Adiciona um fundo preto transparente atrás do texto para garantir leitura */
+        /* background: rgba(0,0,0,0.4);  <-- Descomente se precisar destacar mais o texto */
+        padding: 5px;
+        border-radius: 10px;
+    }
+}
+
 
 /* --- AJUSTE DO MENU MOBILE --- */
 @media (max-width: 768px) {
@@ -443,4 +481,120 @@ img-comparison-slider img {
 .text-muted {
     color: #888;
     font-style: italic;
+}
+
+/* orcamento */
+/* Estilo para a escolha Tatuagem vs Piercing */
+.service-selector {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.radio-box {
+    flex: 1;
+    cursor: pointer;
+}
+
+/* Esconde a bolinha feia padrão do input radio */
+.radio-box input {
+    display: none;
+}
+
+/* O visual do botão */
+.radio-box span {
+    display: block;
+    padding: 15px;
+    background: #1a1a1a;
+    border: 2px solid #333;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    color: #888;
+    transition: all 0.3s;
+}
+
+/* Quando selecionado, fica dourado */
+.radio-box input:checked + span {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background: rgba(212, 175, 55, 0.1);
+}
+
+/* Ajuste nos Selects para ficarem iguais aos inputs de texto */
+select {
+    width: 100%;
+    padding: 15px;
+    background: #121212;
+    border: 1px solid #333;
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* --- Carrossel do Estúdio (Swiper) --- */
+
+.studio-carousel-wrapper {
+    width: 100%;
+    max-width: 1000px; /* Largura máxima no PC para não ficar gigante */
+    margin: 40px auto; /* Centraliza na tela */
+    border-radius: 12px;
+    overflow: hidden; /* Arredonda as pontas das imagens */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6); /* Sombra premium */
+    border: 1px solid #333;
+}
+
+swiper-container {
+    width: 100%;
+    height: 600px; /* Altura fixa no PC */
+    background-color: #000;
+}
+
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Necessário para a legenda */
+}
+
+/* Garante que a imagem cubra todo o espaço do slide */
+swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Corta a imagem para preencher sem distorcer */
+    opacity: 0.85; /* Um leve escurecimento para ficar "dark" */
+    transition: opacity 0.3s;
+}
+
+swiper-slide:hover img {
+    opacity: 1; /* Fica 100% nítida ao passar o mouse */
+}
+
+/* Legenda opcional sobre a foto */
+.slide-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
+    color: var(--primary-color); /* Texto dourado */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* --- Responsividade para Celular --- */
+@media (max-width: 768px) {
+    swiper-container {
+        height: 350px; /* Altura menor no celular */
+    }
+    
+    /* Esconde a legenda no celular se achar que polui muito */
+    /* .slide-caption { display: none; } */
 }

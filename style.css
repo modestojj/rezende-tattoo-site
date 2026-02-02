@@ -4,8 +4,17 @@
     padding: 0;
     box-sizing: border-box;
 }
-html {
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* A MÁGICA: Corta qualquer coisa que tente vazar para o lado */
+    position: relative; /* Ajuda a segurar elementos posicionados */
     scroll-behavior: smooth;
+}
+
+/* Garante que imagens e inputs nunca estourem a largura */
+img, input, textarea, select {
+    max-width: 100%;
 }
 
 :root {

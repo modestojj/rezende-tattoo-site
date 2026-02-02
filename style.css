@@ -193,10 +193,12 @@ nav {
     }
 }
 
-input, textarea {
+/* Adicione 'select' aqui também para garantir */
+input, textarea, select {
     width: 100%;
     padding: 15px;
-    background: #121212; /* Fundo escuro pro campo */
+    font-size: 16px; /* <---Impede o zoom no iPhone */
+    background: #121212; 
     border: 1px solid #333;
     color: #fff;
     border-radius: 5px;
